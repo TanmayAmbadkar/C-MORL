@@ -1,0 +1,72 @@
+[73.19786226 42.57378762], 132.0
+[77.04783098 47.66864291], 175.0
+[63.29784371 38.45066487], 109.2
+[66.81237825 40.38728184], 117.8
+[74.06903678 42.97076654], 138.8
+[59.31956266 35.65439817], 95.6
+[96m 
+------------------------------- Initialization Stage ------------------------------- [0m
+Number of Pareto optimal solutions: 20
+[96m Selected Tasks: [0m
+[96m objs = [124.28066571 306.48783037] [0m
+[96m objs = [259.74734224 178.14423651] [0m
+[96m objs = [215.16458529 245.13183366] [0m
+[96m objs = [259.64756489 178.34876528] [0m
+[96m objs = [129.96044386 298.41874303] [0m
+
+Compiled modules for significant speedup can not be used!
+https://pymoo.org/installation.html#installation
+
+To disable this warning:
+from pymoo.config import Config
+Config.warnings['not_compiled'] = False
+
+Hyper Volume: 137318.9152, Expected Utility: 252.9321, Sparsity: 605.4759
+[96m 
+------------------------------- Extension Stage ------------------------------- [0m
+Starting the extension from iteration 0 to 20.
+Number of Pareto optimal solutions: 61
+[96m Selected Tasks: [0m
+[96m objs = [263.37914061 175.19223259] [0m
+[96m objs = [215.71416938 243.41972738] [0m
+[96m objs = [260.94737871 179.18987465] [0m
+[96m objs = [133.55308154 294.74107753] [0m
+[96m objs = [192.85695381 275.30461064] [0m
+Hyper Volume: 138494.8760, Expected Utility: 253.9305, Sparsity: 177.2438
+Starting the extension from iteration 20 to 40.
+Number of Pareto optimal solutions: 78
+[96m Selected Tasks: [0m
+[96m objs = [264.3986545  173.86716959] [0m
+[96m objs = [261.42946731 179.97685459] [0m
+[96m objs = [216.1034208  242.23673032] [0m
+[96m objs = [136.99767676 289.31764658] [0m
+[96m objs = [211.48441701 251.652845  ] [0m
+Hyper Volume: 138932.6119, Expected Utility: 254.2896, Sparsity: 129.7654
+Starting the extension from iteration 40 to 60.
+Number of Pareto optimal solutions: 103
+[96m Selected Tasks: [0m
+[96m objs = [265.21577685 174.30700716] [0m
+[96m objs = [262.1155572  180.36701433] [0m
+[96m objs = [218.04446955 241.24142166] [0m
+[96m objs = [139.18984172 285.51388543] [0m
+[96m objs = [195.69919811 272.40231744] [0m
+Hyper Volume: 139348.4760, Expected Utility: 254.6796, Sparsity: 92.0276
+Starting the extension from iteration 60 to 80.
+Number of Pareto optimal solutions: 122
+[96m Selected Tasks: [0m
+[96m objs = [265.46380765 174.27549772] [0m
+[96m objs = [262.70096429 180.58570798] [0m
+[96m objs = [220.75775081 239.19034119] [0m
+[96m objs = [140.39770932 286.1690474 ] [0m
+[96m objs = [197.91659507 270.20974702] [0m
+Hyper Volume: 139650.2313, Expected Utility: 254.8356, Sparsity: 71.6183
+Starting the extension from iteration 80 to 97.
+Number of Pareto optimal solutions: 132
+[96m Selected Tasks: [0m
+[96m objs = [265.81949006 175.73296722] [0m
+[96m objs = [222.18270872 237.24109708] [0m
+[96m objs = [263.01594709 181.64783099] [0m
+[96m objs = [140.65852039 287.1964086 ] [0m
+[96m objs = [199.3973402 267.775958 ] [0m
+Hyper Volume: 139908.2203, Expected Utility: 254.9543, Sparsity: 61.8721
+total time: 2198.470495223999

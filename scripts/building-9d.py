@@ -23,7 +23,7 @@ for i in range(args.num_seeds):
     
     if test_cmorl_ipo:
         cmd = f'python morl/run.py '\
-            f'--env-name building --obj-num 9 '\
+            f'--env-name building_9d --obj-num 9 '\
             f'--seed {seed} '\
             f'--num-time-steps 2500000 '\
             f'--num-init-steps 1500000 '\

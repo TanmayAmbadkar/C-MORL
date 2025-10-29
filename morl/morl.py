@@ -22,13 +22,12 @@ from utils import generate_weights_batch_dfs, print_info, generate_w_batch_test,
 from warm_up import initialize_warm_up_batch
 from mopg import MOPG_worker, Extension_worker
 
-from pymoo.factory import get_performance_indicator
 #from pymoo.util.nds.non_dominated_sorting import NonDominatedSorting
-from pymoo.indicators.hv import Hypervolume
+from pymoo.indicators.hv import HV
 from pymoo.util.nds.non_dominated_sorting import NonDominatedSorting
 
 def eval(eval_sample, ref, obj_num, eval_delta_weight):
-    perf_ind = get_performance_indicator("hv", ref_point = -ref)
+    perf_ind = HV(ref_point = -ref)
     preferences = generate_w_batch_test(obj_num, eval_delta_weight)
     hv = perf_ind.do(-eval_sample)
     eu = compute_eu(eval_sample, preferences)
@@ -113,8 +112,8 @@ def run(args):
         
     # save
     obj_array = np.array(ep.obj_batch)
-    hv, eu, sp = eval(obj_array, ref, args.obj_num, args.eval_delta_weight)
-    print(f"Hyper Volume: {hv:.4f}, Expected Utility: {eu:.4f}, Sparsity: {sp:.4f}")
+    # hv, eu, sp = eval(obj_array, ref, args.obj_num, args.eval_delta_weight)
+    # print(f"Hyper Volume: {hv:.4f}, Expected Utility: {eu:.4f}, Sparsity: {sp:.4f}")
     
     # ----------------------> Save Results <---------------------- #
     # save ep
@@ -204,8 +203,8 @@ def run(args):
 
         # save
         reward_list_array = np.array(ep.obj_batch)
-        hv, eu, sp = eval(reward_list_array, ref, args.obj_num, args.eval_delta_weight)
-        print(f"Hyper Volume: {hv:.4f}, Expected Utility: {eu:.4f}, Sparsity: {sp:.4f}")
+        # hv, eu, sp = eval(reward_list_array, ref, args.obj_num, args.eval_delta_weight)
+        # print(f"Hyper Volume: {hv:.4f}, Expected Utility: {eu:.4f}, Sparsity: {sp:.4f}")
 
         # ----------------------> Save Results <---------------------- #
         # save ep

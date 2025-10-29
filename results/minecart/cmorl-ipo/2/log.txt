@@ -1,0 +1,48 @@
+[ 0.          0.         -0.99995895], 500.0
+[ 0.          0.         -0.99995895], 500.0
+[ 0.          0.         -5.03525479], 500.0
+[  0.           0.         -10.99954868], 500.0
+[ 0.          0.         -1.28811814], 500.0
+[ 0.          0.         -0.99995895], 500.0
+[96m 
+------------------------------- Initialization Stage ------------------------------- [0m
+Number of Pareto optimal solutions: 76
+[96m Selected Tasks: [0m
+[96m objs = [ 0.          0.         -0.29926864] [0m
+[96m objs = [ 0.54697748  0.51279539 -1.32040216] [0m
+[96m objs = [ 0.49486035  0.55146189 -1.30405322] [0m
+[96m objs = [ 0.5601158   0.49188052 -1.30552395] [0m
+[96m objs = [ 0.54526307  0.49123684 -1.00948433] [0m
+[96m objs = [ 0.49200722  0.55069582 -1.06157628] [0m
+
+Compiled modules for significant speedup can not be used!
+https://pymoo.org/installation.html#installation
+
+To disable this warning:
+from pymoo.config import Config
+Config.warnings['not_compiled'] = False
+
+Hyper Volume: 482.0456, Expected Utility: 0.1742, Sparsity: 0.0134
+[96m 
+------------------------------- Extension Stage ------------------------------- [0m
+Starting the extension from iteration 0 to 20.
+Number of Pareto optimal solutions: 56
+[96m Selected Tasks: [0m
+[96m objs = [ 0.52223628  0.57740945 -1.05681079] [0m
+[96m objs = [ 0.57492988  0.52154323 -1.07536221] [0m
+[96m objs = [ 0.57618674  0.51575675 -1.05681079] [0m
+[96m objs = [ 0.52079351  0.56436309 -0.89313561] [0m
+[96m objs = [ 0.52670984  0.5586788  -0.89313561] [0m
+[96m objs = [ 0.55011327  0.53027437 -0.89346244] [0m
+Hyper Volume: 495.3635, Expected Utility: 0.1848, Sparsity: 0.0167
+Starting the extension from iteration 20 to 32.
+Number of Pareto optimal solutions: 85
+[96m Selected Tasks: [0m
+[96m objs = [ 0.58371405  0.52192386 -1.07551602] [0m
+[96m objs = [ 0.58838377  0.50385166 -1.05819504] [0m
+[96m objs = [ 0.53827786  0.54248277 -0.89280975] [0m
+[96m objs = [ 0.54585138  0.53360775 -0.8941161 ] [0m
+[96m objs = [ 0.55720462  0.54696119 -1.05834884] [0m
+[96m objs = [ 0.53212058  0.57573304 -1.05681079] [0m
+Hyper Volume: 499.0659, Expected Utility: 0.1869, Sparsity: 0.0108
+total time: 667.4422130584717

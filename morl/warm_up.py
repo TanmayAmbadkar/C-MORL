@@ -43,6 +43,9 @@ def initialize_warm_up_batch(args, device):
             temp_env = mo_gym.make(args.env_name, cost_objective=True, max_episode_steps=500)
         else:
             temp_env = mo_gym.make(args.env_name, max_episode_steps=500)
+        
+        if "humanoid" in args.env_name:
+            temp_env = mo_gym.make(args.env_name, max_episode_steps=1000)
     temp_env.seed = seed=args.seed
 
     for weights in weights_batch:

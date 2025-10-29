@@ -1,0 +1,60 @@
+[83.10435718 47.49755931 82.4651644 ], 179.8
+[89.70441662 49.12165607 88.58857116], 222.6
+[68.85144897 42.52869637 71.8588831 ], 127.6
+[76.6605843  46.90798659 80.28635676], 164.6
+[76.48318712 47.54856208 82.53879127], 183.7
+[71.51098877 45.09932345 77.02788339], 148.1
+[96m 
+------------------------------- Initialization Stage ------------------------------- [0m
+Number of Pareto optimal solutions: 67
+[96m Selected Tasks: [0m
+[96m objs = [92.32486984 59.87594741 97.32068472] [0m
+[96m objs = [242.07856347 113.92078733 -98.54520695] [0m
+[96m objs = [185.8350458  282.96345954  59.88133677] [0m
+[96m objs = [118.69018842  44.32874343  97.46288687] [0m
+[96m objs = [95.90402325 58.80135642 98.7264589 ] [0m
+[96m objs = [252.38795995 101.12600996 -89.94589236] [0m
+
+Compiled modules for significant speedup can not be used!
+https://pymoo.org/installation.html#installation
+
+To disable this warning:
+from pymoo.config import Config
+Config.warnings['not_compiled'] = False
+
+Hyper Volume: 20192214.6875, Expected Utility: 178.9751, Sparsity: 371.6815
+[96m 
+------------------------------- Extension Stage ------------------------------- [0m
+Starting the extension from iteration 0 to 20.
+Number of Pareto optimal solutions: 190
+[96m Selected Tasks: [0m
+[96m objs = [91.96077208 59.94304667 97.2968882 ] [0m
+[96m objs = [256.30795882  89.22667205 -99.7595847 ] [0m
+[96m objs = [128.32233734  20.04482144  96.89993259] [0m
+[96m objs = [256.96650763  84.25871909 -95.71370135] [0m
+[96m objs = [216.4876091   90.9017035    1.57628261] [0m
+[96m objs = [179.79414328 263.70469313  64.54607112] [0m
+Hyper Volume: 21116270.9862, Expected Utility: 180.4119, Sparsity: 77.9477
+Starting the extension from iteration 20 to 40.
+Sample batch size exceeded policy buffer size 200. Performing sampling.
+Number of Pareto optimal solutions: 200
+[96m Selected Tasks: [0m
+[96m objs = [91.42049105 60.31558368 97.02390211] [0m
+[96m objs = [132.91353543   4.78191568  96.20565883] [0m
+[96m objs = [259.24183496  74.00398003 -99.29946417] [0m
+[96m objs = [208.48329753 101.69599945  16.85218034] [0m
+[96m objs = [200.26081168 185.88785898 -75.02696561] [0m
+[96m objs = [238.61981414 126.8157606  -92.40798051] [0m
+Hyper Volume: 21683419.9626, Expected Utility: 180.6161, Sparsity: 38.2356
+Starting the extension from iteration 40 to 54.
+Sample batch size exceeded policy buffer size 200. Performing sampling.
+Number of Pareto optimal solutions: 200
+[96m Selected Tasks: [0m
+[96m objs = [90.87924937 60.66186991 96.75360672] [0m
+[96m objs = [247.2277968  115.13196608 -99.7816207 ] [0m
+[96m objs = [260.00495905  69.16716204 -99.29672138] [0m
+[96m objs = [197.9359935  272.08017694  55.44178621] [0m
+[96m objs = [236.38946985 126.03026956 -32.33497748] [0m
+[96m objs = [242.42867852 131.63959992 -66.82536828] [0m
+Hyper Volume: 21836816.0816, Expected Utility: 181.1840, Sparsity: 31.9838
+total time: 2942.4084742069244

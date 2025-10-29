@@ -40,9 +40,14 @@ def evaluation(args, sample):
             eval_env = mo_gym.make(args.env_name, cost_objective=True, max_episode_steps=500)
         else:
             eval_env = mo_gym.make(args.env_name, max_episode_steps=500)
+        
+        if "humanoid" in args.env_name:
+            eval_env = mo_gym.make(args.env_name, max_episode_steps=1000)
+            
     objs = np.zeros(args.obj_num)
     ob_rms = sample.env_params['ob_rms']
     policy = sample.actor_critic
+    count = 0
     with torch.no_grad():
         for eval_id in range(args.eval_num):
             eval_env.seed = args.seed + eval_id
@@ -53,15 +58,20 @@ def evaluation(args, sample):
                 if args.ob_rms:
                     ob = np.clip((ob - ob_rms.mean) / np.sqrt(ob_rms.var + 1e-8), -10.0, 10.0)
                 _, action, _, _ = policy.act(torch.Tensor(ob).unsqueeze(0), None, None, deterministic=True)
+                
                 action = action.cpu().numpy()
                 action = np.squeeze(action)
+                # print()
                 ob, reward, terminated, truncated, info = eval_env.step(action)
+                # print(action, reward)
                 done = terminated or truncated
                 info['obj'] = reward
                 objs += gamma * info['obj']
                 gamma *= args.eval_gamma
+                count+=1
     eval_env.close()
     objs /= args.eval_num
+    print(f"{objs}, {count/args.eval_num}")
     return objs
 
 '''
@@ -248,6 +258,7 @@ def Extension_worker(args, sample_id, sample, device, iteration, num_updates, st
                     obj_tensor[idx] = torch.from_numpy(info['obj'])
                     episode_obj[idx] = info['obj_raw'] if episode_obj[idx] is None else episode_obj[idx] + info['obj_raw']
                     if 'episode' in info.keys():
+                        # print("Current return, ", info['episode']['r'])
                         episode_rewards.append(info['episode']['r'])
                         episode_lens.append(info['episode']['l'])
                         if episode_obj[idx] is not None:

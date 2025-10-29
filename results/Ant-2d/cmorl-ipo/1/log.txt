@@ -1,0 +1,58 @@
+[ 97.70397561 102.45262204], 500.0
+[99.77021392 97.96761201], 500.0
+[100.02240661 100.85460751], 500.0
+[96m 
+------------------------------- Initialization Stage ------------------------------- [0m
+Number of Pareto optimal solutions: 3
+[96m Selected Tasks: [0m
+[96m objs = [225.29276532 273.46001863] [0m
+[96m objs = [254.12409496 259.37189758] [0m
+[96m objs = [236.80119903 271.90426919] [0m
+
+Compiled modules for significant speedup can not be used!
+https://pymoo.org/installation.html#installation
+
+To disable this warning:
+from pymoo.config import Config
+Config.warnings['not_compiled'] = False
+
+Hyper Volume: 131989.2398, Expected Utility: 259.5139, Sparsity: 296.0037
+[96m 
+------------------------------- Extension Stage ------------------------------- [0m
+Starting the extension from iteration 0 to 20.
+Number of Pareto optimal solutions: 11
+[96m Selected Tasks: [0m
+[96m objs = [226.58465825 276.76493316] [0m
+[96m objs = [274.1912942  250.23960491] [0m
+[96m objs = [251.26024307 276.69061197] [0m
+[96m objs = [251.5528628  271.34638386] [0m
+[96m objs = [254.87783226 263.01449443] [0m
+Hyper Volume: 140482.4086, Expected Utility: 269.3617, Sparsity: 84.7371
+Starting the extension from iteration 20 to 40.
+Number of Pareto optimal solutions: 8
+[96m Selected Tasks: [0m
+[96m objs = [221.18925607 278.62812401] [0m
+[96m objs = [271.7735032  257.88456628] [0m
+[96m objs = [269.26118494 267.36638561] [0m
+[96m objs = [256.3837694  269.25987721] [0m
+[96m objs = [255.33020907 272.92749369] [0m
+Hyper Volume: 141322.6404, Expected Utility: 270.5731, Sparsity: 145.2400
+Starting the extension from iteration 40 to 60.
+Number of Pareto optimal solutions: 10
+[96m Selected Tasks: [0m
+[96m objs = [288.26802045 253.00850134] [0m
+[96m objs = [279.36614535 255.05329798] [0m
+[96m objs = [270.33929198 259.26241031] [0m
+Hyper Volume: 146315.5500, Expected Utility: 275.4573, Sparsity: 119.5615
+Starting the extension from iteration 60 to 80.
+Number of Pareto optimal solutions: 11
+[96m Selected Tasks: [0m
+[96m objs = [288.40026803 227.80904563] [0m
+[96m objs = [270.75573019 259.60428972] [0m
+Hyper Volume: 146359.9867, Expected Utility: 275.4586, Sparsity: 170.6768
+Starting the extension from iteration 80 to 97.
+Number of Pareto optimal solutions: 12
+[96m Selected Tasks: [0m
+[96m objs = [256.88615143 267.93649302] [0m
+Hyper Volume: 146360.2731, Expected Utility: 275.4586, Sparsity: 153.8932
+total time: 5224.570430517197

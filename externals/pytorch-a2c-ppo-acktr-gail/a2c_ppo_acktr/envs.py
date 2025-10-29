@@ -23,15 +23,15 @@ try:
 except ImportError:
     pass
 
-try:
-    import roboschool
-except ImportError:
-    pass
+# try:
+#     import roboschool
+# except ImportError:
+#     pass
 
-try:
-    import pybullet_envs
-except ImportError:
-    pass
+# try:
+#     import pybullet_envs
+# except ImportError:
+#     pass
 
 
 def make_env(env_id, seed, rank, log_dir, allow_early_resets, cost_objective, env_params=None):
@@ -51,6 +51,9 @@ def make_env(env_id, seed, rank, log_dir, allow_early_resets, cost_objective, en
                     env = mo_gym.make(env_id, cost_objective=True, max_episode_steps=500)
                 else:
                     env = mo_gym.make(env_id, max_episode_steps=500)
+                    
+                if "humanoid" in env_id:
+                    env = mo_gym.make(env_id, max_episode_steps=1000)
             if env_params:
                 env.set_params(env_params)
 
